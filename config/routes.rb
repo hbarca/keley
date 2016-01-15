@@ -1,8 +1,8 @@
 Keley::Application.routes.draw do
 
- 
   get "welcome/index"
   resources :admin, only: :index
+  resources :products, only: [:index, :show]
 
   devise_for :users
 

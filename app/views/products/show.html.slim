@@ -1,2 +1,11 @@
-h1 Products#show
-p Find me in app/views/products/show.html.slim
+.row
+  .large-12.columns
+    h1= @product.name
+.row
+  .large-6.columns
+    = image_tag @product.image_url
+  .large-6.columns
+    p= @product.description
+.row
+  .large-12.columns
+    p = link_to "Retour à la liste", root_path

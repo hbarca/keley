@@ -6,6 +6,7 @@
         th Descriptif
         th Prix
         th Poid
+        th
     tbody
       - @products.each do |p|
         tr
@@ -17,4 +18,4 @@
           td
             = p.weight
             |  kg
-            
+          td= link_to "en savoir plus ...", product_path(p)
