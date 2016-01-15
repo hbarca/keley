@@ -7,7 +7,11 @@ Keley::Application.routes.draw do
   devise_for :users
 
   namespace :admin do
-    resources :products
+
+    resources :products do
+      post :sort_list, on: :collection
+    end
+
     resources :tags
   end
 

@@ -1,6 +1,6 @@
 class Admin::ProductsController < AdminController
   def index
-    @products = Product.all
+    @products = Product.order("rank ASC").all
   end
 
   def new
@@ -36,5 +36,15 @@ class Admin::ProductsController < AdminController
     @product = Product.find(params[:id])
     redirect_to admin_products_path if @product.destroy
   end
+
+  def sort_list
+    @product = Product.find(params[:product][:id])
+    @product.rank = params[:product][:rank]
+    @product.save
+
+    render nothing: true
+  end
+
+
 
 end

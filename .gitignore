@@ -8,6 +8,10 @@
 /.bundle
 /.rvmrc
 
+/db/schema.rb
+
+/public/uploads/
+
 # Ignore the default SQLite database.
 /db/*.sqlite3
 

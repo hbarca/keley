@@ -1,13 +1,16 @@
 .row
   h3 Liste des Produits
-  table
+  table#sort_here
     thead
-      th Nom
-      th Création
-      th Modification
+      tr
+        th rank
+        th Nom
+        th Création
+        th Modification
     tbody
       - @products.each do |p|
-        tr
+        tr.item data-item-id="#{p.id}"
+          td = p.rank
           td = p.name
           td = image_tag(p.image_url(:thumb)) if p.image?
           td = link_to 'Editer', edit_admin_product_path(p)

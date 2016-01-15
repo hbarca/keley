@@ -19,9 +19,9 @@ ActiveRecord::Schema.define(:version => 20160115105553) do
     t.float    "weight"
     t.float    "price"
     t.integer  "rank"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-    t.boolean  "enabled"
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.boolean  "enabled",     :default => true
     t.boolean  "carrousel"
     t.string   "image"
   end
