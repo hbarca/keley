@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160115095715) do
+ActiveRecord::Schema.define(:version => 20160115105553) do
 
   create_table "products", :force => true do |t|
     t.string   "name"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20160115095715) do
     t.datetime "updated_at",  :null => false
     t.boolean  "enabled"
     t.boolean  "carrousel"
+    t.string   "image"
   end
 
   add_index "products", ["carrousel"], :name => "index_products_on_carrousel"

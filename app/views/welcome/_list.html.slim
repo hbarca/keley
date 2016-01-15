@@ -1,0 +1,19 @@
+.row
+  table
+    thead
+      tr
+        th
+        th Descriptif
+        th Prix
+        th Poid
+    tbody
+      - @products.each do |p|
+        tr
+          td= image_tag(p.image_url(:listing))
+          td= p.description
+          td
+            = p.price
+            | euros
+          td
+            = p.weight
+            | kg

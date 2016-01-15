@@ -4,7 +4,7 @@ class Admin::TagsController < AdminController
   end
 
   def show
-    @tags = Tag.find(params[:id])
+    @tag = Tag.find(params[:id])
   end
 
   def new
@@ -13,7 +13,7 @@ class Admin::TagsController < AdminController
 
   def create
     @tag = Tag.create(params[:tag])
-    if @tags
+    if @tag
       redirect_to admin_tags_path
     else
       render :edit
@@ -25,9 +25,9 @@ class Admin::TagsController < AdminController
   end
 
   def update
-    @tags = Tag.find(params[:id])
+    @tag = Tag.find(params[:id])
 
-    if @tags.update_attributes(params[:tag])
+    if @tag.update_attributes(params[:tag])
       redirect_to admin_tags_path
     else
       render :edit
@@ -36,7 +36,7 @@ class Admin::TagsController < AdminController
   end
 
   def destroy
-    @tags = Tag.find(params[:id])
-    redirect_to admin_tags_path if @tags.destroy
+    @tag = Tag.find(params[:id])
+    redirect_to admin_tags_path if @tag.destroy
   end
 end

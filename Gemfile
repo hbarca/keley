@@ -13,6 +13,8 @@ gem 'devise', '~> 3.3.0'
 gem 'rmagick', '~> 2.13.2'
 gem 'carrierwave', '~> 0.6.2'
 gem 'simple_form'
+gem 'ranked-model'
+
 
 # Gems used only for assets and not required
 # in production environments by default.

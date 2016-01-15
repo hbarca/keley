@@ -11,6 +11,6 @@
           td = t.name
           td = t.created_at
           td = t.updated_at
-          td = link_to 'Editer', edit_admin_path(p)
-          td = link_to 'Supprimer', destroy_admin_path(p), method: :delete, confirm: "Êtes-vous sûr?"
+          td = link_to 'Editer', edit_admin_tag_path(t)
+          td = link_to 'Supprimer', admin_tag_path(t), method: :delete, confirm: "Êtes-vous sûr?"
   = link_to "Ajouter un Tag", new_admin_tag_path,  class: "button round small"

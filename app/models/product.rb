@@ -1,5 +1,8 @@
 class Product < ActiveRecord::Base
 
+  include RankedModel
+  ranks :rank
+
   attr_accessible :description, :name, :price, :rank, :weight, :enabled, :carrousel, :image
 
   mount_uploader :image, ImageUploader
@@ -8,7 +11,7 @@ class Product < ActiveRecord::Base
   ########
 
   scope :enabled, where(enabled: true)
-  scope :carrousel, where(carrousel: true)
+  scope :carrousel, where(carrousel: true).order("rank ASC")
 
   # RELATIONS
   ###########
