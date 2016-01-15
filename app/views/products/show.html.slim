@@ -9,3 +9,4 @@
 .row
   .large-12.columns
     p = link_to "Retour à la liste", root_path
+= render partial: "tags", collection: @tags,  as: :tag

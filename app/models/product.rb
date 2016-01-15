@@ -3,7 +3,7 @@ class Product < ActiveRecord::Base
   include RankedModel
   ranks :rank
 
-  attr_accessible :description, :name, :price, :rank, :weight, :enabled, :carrousel, :image
+  attr_accessible :description, :name, :price, :rank, :weight, :enabled, :carrousel, :image, :tag_ids
 
   mount_uploader :image, ImageUploader
 
