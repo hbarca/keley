@@ -7,7 +7,6 @@ gem 'slim-rails'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'foundation-rails'
 
 gem 'devise', '~> 3.3.0'
 gem 'rmagick', '~> 2.13.2'
@@ -15,13 +14,13 @@ gem 'carrierwave', '~> 0.6.2'
 gem 'simple_form'
 gem 'ranked-model'
 
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-  gem 'foundation-rails'
+  gem 'foundation-rails', '~> 5.5.3'
+
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -30,7 +29,7 @@ group :assets do
 end
 
 group :developement do
-  gem 'rails_layout'
+  #gem 'rails_layout'
 end
 
 gem 'jquery-rails', '~> 2.3.0'
