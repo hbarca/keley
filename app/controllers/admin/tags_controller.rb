@@ -21,7 +21,7 @@ class Admin::TagsController < AdminController
   end
 
   def edit
-    @tags = Tag.find(params[:id])
+    @tag = Tag.find(params[:id])
   end
 
   def update

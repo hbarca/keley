@@ -1,0 +1,6 @@
+.row.carrousel
+  ul data-orbit=""
+    - @pictures.each do |p|
+      li
+        = image_tag(p.image_url(:carrousel)) if p.image? 
+        .orbit-caption= p.name

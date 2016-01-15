@@ -41,7 +41,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   version :carrousel do
-    process :resize_to_fill => [-1, 480]
+    process :resize_to_fill => [480, -1]
   end
 
     version :listing do

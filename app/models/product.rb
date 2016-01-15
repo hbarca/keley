@@ -19,5 +19,8 @@ class Product < ActiveRecord::Base
   has_many :taggables_tags, :as => :taggable, :dependent => :destroy
   has_many :tags, :through => :taggables_tags
 
+  def self.search(keyword)
+    where('LOWER(name) LIKE :keyword OR LOWER(description) LIKE :keyword', keyword: "%#{keyword.downcase}%")
+  end
 
 end

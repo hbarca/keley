@@ -1,18 +1,22 @@
-.row.carrousel
+= render partial: 'carrousel'
 .row
   = form_tag :controller => 'welcome', :action => 'index', :method => 'get'
-    .large-3.columns
-      h4 Filter
-      - @tags.each do |t|
-        = check_box_tag 'tags[#{t.name}]'
-        = t.name
-    .large-3.columns
-      h4 Tri par:
-      = check_box_tag 'price'
-      | Prix
-      br
-      = check_box_tag 'weight'
-      | Poids
+    .large-6.columns
+      .row
+        .large-6.columns
+          h4 Filter
+          - @tags.each do |t|
+            = check_box_tag 'tags[#{t.name}]'
+            = t.name
+        .large-6.columns
+          h4 Tri par:
+          = check_box_tag 'price'
+          | Prix
+          br
+          = check_box_tag 'weight'
+          | Poids
+      .row
+        = link_to "Go", "#",  class: "button round small"
 
     .large-6.columns
       = text_field_tag 'name', nil, class: 'autocomplete'
