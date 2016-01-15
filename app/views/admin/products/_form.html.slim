@@ -1,0 +1,7 @@
+= simple_form_for [:admin, @product] do |p|
+  = p.input :name
+  = p.input :description
+  = p.input :image, as: :file
+  = p.input :weight
+  = p.input :price
+  = p.button :submit

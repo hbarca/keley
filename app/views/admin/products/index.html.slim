@@ -1,0 +1,16 @@
+.row
+  h3 Liste des Produits
+  table
+    thead
+      th Nom
+      th Création
+      th Modification
+    tbody
+      - @tags.each do |t|
+        tr
+          td = t.name
+          td = t.created_at
+          td = t.updated_at
+          td = link_to 'Editer', edit_admin_path(p)
+          td = link_to 'Supprimer', destroy_admin_path(p), method: :delete, confirm: "Êtes-vous sûr?"
+  = link_to "Ajouter un Tag", new_admin_tag_path,  class: "button round small"
